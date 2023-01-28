@@ -118,7 +118,6 @@ namespace Collection.UnitsTests
                 Assert.Throws<ArgumentOutOfRangeException>(() => coll[2] = 7);
             }
 
-
             [Test]
             public void Test_Collection_AddRangeWithGrow()
             {
@@ -133,7 +132,6 @@ namespace Collection.UnitsTests
                 Assert.That(coll.ToString(), Is.EqualTo(expectedNums));
                 Assert.That(coll.Capacity, Is.GreaterThanOrEqualTo(oldCapacity));
                 Assert.That(coll.Capacity, Is.GreaterThanOrEqualTo(coll.Count));
-
             }
 
             [Test]
@@ -147,7 +145,6 @@ namespace Collection.UnitsTests
                 string nestedToString = nested.ToString();
 
                 Assert.That(nestedToString, Is.EqualTo("[[Ivan, Peter], [10, 20], []]"));
-
             }
 
             [Test]
@@ -209,7 +206,6 @@ namespace Collection.UnitsTests
                 var coll = new Collection<int>(5, 7, 9);
 
                 Assert.That(() => { coll.InsertAt(4, 11); }, Throws.InstanceOf<ArgumentOutOfRangeException>());
-
             }
 
             [Test]
@@ -219,8 +215,8 @@ namespace Collection.UnitsTests
                 coll.Exchange(1, 2);
 
                 Assert.That(coll.ToString(), Is.EqualTo("[3, 7, 5]"));
-
             }
+
             [Test]
             public void Test_Collection_ExchangeFirstLast()
             {
@@ -236,7 +232,6 @@ namespace Collection.UnitsTests
                 var coll = new Collection<int>(3, 5, 7);
 
                 Assert.That(() => { coll.Exchange(4, 5); }, Throws.InstanceOf<ArgumentOutOfRangeException>());
-
             }
 
             [Test]
@@ -285,7 +280,6 @@ namespace Collection.UnitsTests
 
                 Assert.That(coll.ToString(), Is.EqualTo("[]"));
             }
-
 
             [Test]
             public void Test_Collection_Clear()
