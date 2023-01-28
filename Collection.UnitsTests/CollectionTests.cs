@@ -108,8 +108,8 @@ namespace Collection.UnitsTests
                 coll.AddRange(26, 27, 28);
 
                 Assert.AreEqual(coll.ToString(), ("[23, 24, 25, 26, 27, 28]"));
-
             }
+
             [Test]
             public void Test_Collection_SetByInvalidIndex()
             {
@@ -121,7 +121,6 @@ namespace Collection.UnitsTests
             [Test]
             public void Test_Collection_AddRangeWithGrow()
             {
-
                 var coll = new Collection<int>();
                 int oldCapacity = coll.Capacity;
                 var newColl = Enumerable.Range(1000, 2000).ToArray();
